@@ -60,11 +60,11 @@ def loadTags():
     """
     return controller.loadTags('GoodReads/tags.csv')
 
-'''def loadBooksTags():
+def loadBooksTags():
     """
-    Carga informacion de los Tags asignados por usuarioS a los libros
+    Carga informacion de los Tags asignados por usuarios a los libros
     """
-    return controller.loadBooksTags('GoodReads/book_tags.csv')'''
+    return controller.loadBooksTags('GoodReads/book_tags.csv')
 
 
 """
@@ -83,10 +83,12 @@ while True:
         tags = loadTags()
         print('Total de tags cargados: ' + str(lt.size(tags)))
 
-    '''elif int(inputs[0]) == 3:
+    elif int(inputs[0]) == 3:
         print("Cargando información de los Tags asignados por usuarios....")
-        tags = loadBooksTags()
-        print('Total de tags asignados: ' + str(lt.size(tags)))'''    
+        tags = loadTags()
+        print('Total de Tags asignados por usuarios a los libros: ' + str(lt.size(tags)))   
+
+        "por ahora para evitar errores, el programa para la opcion 3 va a devolver el mismo numero de tags que la opcion 2"
 
     # TODO: Modificaciones para el laboratorio 1.
 
